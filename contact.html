@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Clothing Store</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="newsletter.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/product/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="kids.html">Kids</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li class="login-nav"><a href="login.html">Login</a>
+                    <div class="create-account-popup">
+                        <a href="register.html">Create Account</a>
+                        <a href="orders.html">My Orders</a>
+                    </div>
+                </li>
+                <li id="lg-bag">
+                    <a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a>
+                    <span id="cart-count" class="cart-count">0</span>
+                </li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="contact-header">
+        <h2>#let's_talk</h2>
+        <p>Have a question or feedback? We'd love to hear from you!</p>
+    </section>
+
+    <section id="contact-details" class="section-p1">
+        <div class="details">
+            <span>GET IN TOUCH</span>
+            <h2>Visit one of our agency locations or contact us today</h2>
+            <h3>Head Office</h3>
+            <div>
+                <li>
+                    <i class="fal fa-map"></i>
+                    <p>Port Said Street, Naga Hammadi City, Qena Governorate</p>
+                </li>
+                <li>
+                    <i class="far fa-envelope"></i>
+                    <p>contact@example.com</p>
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <p>(+20) 01281925975 / (+20) 01559886232</p>
+                </li>
+                <li>
+                    <i class="far fa-clock"></i>
+                    <p>Monday to Saturday: 9:00am to 16:00pm</p>
+                </li>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3574.4026340980095!2d32.24673227536673!3d26.37685447706726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x144eb5f6e22c0b75%3A0x7c5e0b451e8f85a9!2sNaga%20Hammadi%2C%20Qena%20Governorate!5e0!3m2!1sen!2seg!4v1704838138486!5m2!1sen!2seg" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section id="form-details">
+        <div class="people">
+            <div>
+                <p><span>Hussien Ahmed</span> Manager <br> Phone: +201063713157 <br> Email: hussienarfat816@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="newtext">
+            <h4>Join Our Community</h4>
+            <p>Be part of our fashion family and enjoy <span>exclusive benefits</span></p>
+        </div>
+        <div class="newsletter-cta">
+            <a href="register.html" class="signup-btn">Create Account</a>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/product/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>Port Said Street, Naga Hammadi City, Qena Governorate</p>
+            <p><strong>Phone: </strong> (+20) 01281925975 / (+20) 01559886232 </p>
+            <p><strong>Hours </strong>10:00 - 18:00 , Mon - Sat</p>
+        </div>
+
+        <div class="col">
+            <h4>Quick Links</h4>
+            <a href="men.html">Men's Collection</a>
+            <a href="women.html">Women's Collection</a>
+            <a href="kids.html">Kids Collection</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Customer Service</h4>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="cart.html">View Cart</a>
+            <a href="orders.html">Track Order</a>
+        </div>
+        <div class="copyright">
+            <p>© 2024, Fashion Store - Modern Fashion Shopping</p>
+        </div>
+    </footer>
+
+    <!-- Core scripts -->
+    <script src="auth.js"></script>
+    <script src="cart-service.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Check authentication status and update cart count when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            checkAuth();
+            if (localStorage.getItem('currentUser')) {
+                cartService.updateCartCount();
+            }
+        });
+    </script>
+</body>
+</html>
